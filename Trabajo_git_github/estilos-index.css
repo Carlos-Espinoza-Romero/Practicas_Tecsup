@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* asegurar que el fondo cubra toda la pantalla */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* cuerpo con fondo crema */
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* centro absoluto de la tarjeta (vertical + horizontal) */
+    main {
+        display: flex;
+        align-items: center;
+        /* centra verticalmente */
+        justify-content: center;
+        /* centra horizontalmente */
+        height: 100vh;
+        /* ocupa toda la pantalla */
+        background-color: hsl(30, 38%, 92%);
+    }
+
+    /* Desktop: Layout lado a lado adaptable */
+    @media (min-width: 900px) {
+        main {
+            flex-direction: row;
+        }
+
+        .imagen {
+            /* imagen a la izquierda */
+            width: 375px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .tarjeta {
+            width: 375px;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+
+    /* mobile: apilar verticalmente y ajustar anchos */
+    @media (max-width: 899px) {
+        main {
+            flex-direction: column;
+        }
+
+        .imagen {
+            width: 100%;
+            height: 320px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .tarjeta {
+            width: 100%;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .contenido_tarjeta {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+
+    }
+
+    .boton {
+        display: block;
+        /* el botón ocupa toda la línea */
+        margin: 20px auto;
+        /* centra horizontalmente */
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        padding: 15px 80px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* pulir la tarjeta */
+    .tarjeta {
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 10px 30px rgba(10, 10, 10, 0.08);
+        overflow: hidden;
+    }
+
+    #imagen,
+    .tarjeta {
+        height: 500px;
+    }
+    /* Imagen: buena práctica */
+    .imagen {
+        display: block;
+    }
+
+    /* pequeños ajustes visuales */
+    .contenido_tarjeta {
+        padding: 20px 0px 20px 20px;
+    }
+
+    .oferta {
+        color: hsl(158, 36%, 37%);
+        font-size: 40px;
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "SOFT" 0,
+            "WONK" 0;
+        line-height: 1;
+    }
+
+    /* opcional: centrar texto en mobile */
+    @media (max-width: 480px) {
+        .contenido_tarjeta {
+            text-align: center;
+        }
+
+        .boton {
+            margin-left: 0;
+            display: inline-block;
+        }
+    }
+
+    #crema {
+        color: hsl(228, 12%, 48%);
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #negro {
+        color: hsl(212, 21%, 14%);
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "SOFT" 0,
+            "WONK" 0;
+    }

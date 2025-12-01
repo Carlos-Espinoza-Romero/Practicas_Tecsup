@@ -220,7 +220,11 @@ a {
     height: 4rem;
   }
 
-
+@media (min-width: 562px) {
+  .stack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /*Desktop*/
 @media (min-width: 992px) {
@@ -247,11 +251,7 @@ a {
 
 }
 
-@media (min-width: 562px) {
-  .stack {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+
 
 
 

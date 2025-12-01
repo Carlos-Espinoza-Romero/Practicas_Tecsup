@@ -241,11 +241,19 @@ a {
     height: auto;
   }
 
+  .stack {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
 }
 
-.stack {
-  grid-template-columns: repeat(6, 1fr);
+@media (min-width: 562px) {
+  .stack {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
+
 
 
 

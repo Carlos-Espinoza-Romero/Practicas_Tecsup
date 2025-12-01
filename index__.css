@@ -485,7 +485,7 @@ a {
   .footer__description {
     font-weight: var(--font-weight-semibold);
     position: relative;
-  }a
+  }
 
 /*Desktop*/
 @media (min-width: 992px) {
